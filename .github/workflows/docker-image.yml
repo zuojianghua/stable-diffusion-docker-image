@@ -13,6 +13,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag stable-diffusion-docker-image:$(date +%s)
+      - name: Build the Docker image
+        uses: actions/checkout@v3
+      
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}  
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+     
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v3.2.0 # docker build & push
+        with:
+          context: .
+          file: Dockerfile
+          push: true
+          tags: stable-diffusion-docker-image:$(date +%s)
