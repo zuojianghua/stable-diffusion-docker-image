@@ -1,0 +1,14 @@
+ftfy
+regex
+tqdm
+timm
+fairscale
+pandas
+numpy==1.22.0
+gradio
+basicsr
+redis
+diffusers
+realesrgan
+accelerate
+transformers
