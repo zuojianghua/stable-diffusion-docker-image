@@ -28,4 +28,4 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags: stable-diffusion-docker-image:$(date +%s)
+          tags: stable-diffusion-docker-image
