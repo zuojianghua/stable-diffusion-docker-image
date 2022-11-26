@@ -12,3 +12,4 @@ diffusers
 realesrgan
 accelerate
 transformers
+tencentcloud-sdk-python
