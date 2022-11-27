@@ -4,7 +4,7 @@ USER root
 EXPOSE 8800
 COPY ./requirements.txt /workspace
 RUN apt-get update && apt-get upgrade -y && apt-get install git -y
-RUN pip install -r /workspace/requirements.txt
+RUN export FORCE_CUDA="1" && export TORCH_CUDA_ARCH_LIST=8.6 && pip install -r /workspace/requirements.txt
 # RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple && pip install -r /workspace/requirements.txt
 # RUN pip install git+https://github.com/openai/CLIP.git
 # RUN git clone https://github.com/pharmapsychotic/clip-interrogator.git
