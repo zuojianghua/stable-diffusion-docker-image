@@ -13,3 +13,5 @@ realesrgan
 accelerate
 transformers
 tencentcloud-sdk-python
+ninja
+git+https://github.com/facebookresearch/xformers.git@main#egg=xformers
