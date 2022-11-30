@@ -4,8 +4,8 @@ tqdm
 timm
 fairscale
 pandas
-numpy==1.22.0
-gradio==3.2.0
+numpy==1.22.2
+gradio==3.2
 basicsr
 redis
 diffusers
